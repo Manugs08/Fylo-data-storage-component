@@ -1,0 +1,204 @@
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    font-family: "Raleway", sans-serif;
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    --Blue200: hsl(243, 100%, 93%);
+    --GrayishBlue: hsl(229, 7%, 55%);
+    --Blue850: hsl(228, 56%, 26%);
+    --Blue950: hsl(229, 57%, 11%);
+}
+body,div,img,span,p{
+    padding: 0;
+    margin: 0;
+}
+
+.conteiner{
+    width: 100%;
+    height: 100dvh;
+    background-image: url("images/bg-mobile.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    justify-content: center;
+}
+.title-conteiner{
+    width: 90%;
+    background-color: var(--Blue850);
+    padding: 40px 10px 45px 30px;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.imgs-conteiner{
+    display: flex;
+    width: 90%;
+    gap:15px;
+    
+}
+.img-background{
+    height: auto;
+    width: 20%;
+    padding: 9px 4px;
+    background-color: var(--Blue950);
+    border-radius: 10px;
+    display: block;
+}
+.img-background img{
+    display: block;
+    margin: 0 auto
+}
+.img-background .upload{
+    margin: 3px auto 
+}
+.imgs-conteiner .folder{
+    margin:2px auto ;
+}
+.title-conteiner img{
+    max-width: 50%;
+}
+
+
+.storage-conteiner{
+    width: 90%;
+    background-color: var(--Blue850);
+    border-radius: 15px;
+    color:var(--Blue200);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:12px;
+    padding: 20px 20px 60px 20px;
+    position: relative;
+}
+.bar-conteiner{
+    width: 90%;
+    padding: 3px;
+    background-color: var(--Blue950);
+    border-radius: 20px;
+}
+.bar{
+    width: 75.5%;
+    height: 15px;
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 20px;
+    padding: 1px;
+    display: flex;
+    justify-content: end;
+}
+.ball{
+    padding: 6px;
+    background-color:var(--Blue200) ;
+    border-radius: 50%;
+    margin-left: 3px;
+}
+.gb-used{
+    font-weight: 700;
+}
+.gb-conteiner{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+.gbleft-conteiner{
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    color:var(--GrayishBlue);
+    display: flex;
+    gap:5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    border-radius: 15px;
+}
+.gbs-conteiner{
+    width: 50%;
+    position: absolute;
+    bottom: -20%;
+}
+.gb{
+    font-size: 2rem;
+    color:var(--Blue950);
+    font-weight: 700;
+    align-self: start;
+}
+
+@media (min-width:65rem){
+   body{
+    display: flex;
+    align-items: end;
+    background-color: var(--Blue950);
+    height: 100dvh;
+   }
+    .conteiner{
+        background-image: url("images/bg-desktop.png");
+        background-repeat: no-repeat;
+        flex-direction: row;
+        align-items: center;
+        max-height:55dvh;
+        position: relative;
+        background-size: cover;
+    }
+    .title-conteiner{
+        width: 25%;
+        position: absolute;
+        top:-22%;
+        left: 20%;
+    }
+    .storage-conteiner{
+        width: 40%;
+        position: absolute;
+        right: 13%;
+        top:-10%;
+        align-items: start;
+    }
+    .gbleft-conteiner{
+        width:100%;
+        height: 70px;
+        border-bottom-right-radius: 0;
+        position: relative;
+    }
+    .gbleft-conteiner::before{
+        content:"";
+        width: 80px;
+        height: 80px;
+        background-color: #fff;
+        position: absolute;
+        clip-path: polygon(75% 75%, 75% 100%, 50% 75%);
+        right: -20.5px;
+        bottom: -28%;
+    }
+    .gbs-conteiner{
+        position: absolute;
+        width: 35%;
+        top:-30%;
+        right: 8%;
+    }
+}
+
+@media (max-width:65rem) and (min-width:48rem){
+    .conteiner{
+        flex-direction: row;
+        background-repeat: no-repeat;
+        background-size: cover;
+        gap:30px
+    }
+    .title-conteiner{
+        width: 40%;
+    }
+    .storage-conteiner{
+        width: 50%;
+    }
+}
