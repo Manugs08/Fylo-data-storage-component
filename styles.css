@@ -23,7 +23,7 @@ body,div,img,span,p{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:10px;
+    gap:20px;
     justify-content: center;
 }
 .title-conteiner{
